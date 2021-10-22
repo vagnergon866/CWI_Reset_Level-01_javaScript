@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Funções 2</title>
+</head>
+ <body>
+	<script type="text/javascript"> 
+
+		function imprimir(args)
+		{
+          console.log(args);
+		}
+
+        // Verifica se os nomes são iguais.
+		function mesmoNome(primeiroNome,segundoNome)
+		{
+
+			return primeiroNome == segundoNome; 
+		}
+
+		// Verificar a maior idade.
+		function maiorDeIdade(idade)
+		{
+			return idade >= 18;
+		}
+		// Verificar o valor do boleto com a taxa de juros de 10%.
+		function valorComJuros(valorBoleto)
+		{
+			return valorBoleto * 1.1;
+		}
+		// Calculo da média aritimetica de todos os itens do array.
+		function mediaAritmetica(itens)
+		{
+			soma = 0;
+            // Somar os itens do array.
+			for (index = 0; index < itens.length; index++)
+			{
+				soma += itens[index];
+			}
+			return soma / itens.length;
+		}
+		/*calculo da margem bruta da empresa com base na receira líquida 
+		de vendas e no custo dos produtos vendidos.
+		O resultado final é mutiplicado por 100 para considerar o valor percentual.*/
+		function margemBruta(receitaLiquidaVendas,custoProdutosVendidos)
+		{
+			lucroBruto = receitaLiquidaVendas - custoProdutosVendidos;
+			return (lucroBruto / receitaLiquidaVendas) * 100;
+		}
+
+          cwi = "CWI"
+          reset = "Reset"
+          imprimir(mesmoNome(cwi, cwi))   // true
+          imprimir(mesmoNome(cwi, reset)) // false
+
+          imprimir("---")
+
+          imprimir(maiorDeIdade(30)) // true
+          imprimir(maiorDeIdade(18)) // true
+          imprimir(maiorDeIdade(5))  // false
+
+          imprimir("---")
+
+          imprimir(valorComJuros(100))   // 110
+          imprimir(valorComJuros(984.5)) // 1082.95
+
+          imprimir("---")
+
+          imprimir(mediaAritmetica([1]))             // 1
+          imprimir(mediaAritmetica([1, 4, 10]))      // 5
+          imprimir(mediaAritmetica([1, 2, 3, 4, 5])) // 3
+
+          imprimir("---")
+
+          imprimir(margemBruta(1000000, 500000))      // 50
+          imprimir(margemBruta(528459.11, 632501.87)) // -19.68[...]
+	
+   </script>
+ </body>
+</html>
